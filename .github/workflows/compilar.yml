@@ -1,0 +1,32 @@
+name: Compilar GBA_OS
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: # Permite compilar manualmente clicando num botão
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Copia os seus arquivos do repositório para o servidor de compilação
+    - name: Baixar código fonte
+      uses: actions/checkout@v4
+
+    # 2. Instala o compilador oficial da ARM e o utilitário Make na máquina virtual
+    - name: Instalar ferramentas ARM Bare-Metal
+      run: |
+        sudo apt update
+        sudo apt install -y build-essential gcc-arm-none-eabi binutils-arm-none-eabi
+
+    # 3. Executa o comando do seu Makefile automaticamente
+    - name: Compilar o Sistema Operacional
+      run: make
+
+    # 4. Disponibiliza o arquivo final .bin para você baixar direto do navegador
+    - name: Guardar binário gerado
+      uses: actions/upload-artifact@v4
+      with:
+        name: GBA_OS_Binario
+        path: gba_os.bin
