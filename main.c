@@ -11,10 +11,6 @@
 #include "gba_sintetizador.h"
 #include <stdint.h>
 
-// Definição global das memórias do sistema usadas por todos os seus módulos
-unsigned char rom_do_jogo[0x2000000];  // Espaço de 32MB para a ROM do jogo
-unsigned char vram_do_gba[0x18000];    // 96KB de VRAM para os gráficos
-unsigned char sram_do_gba[0x8000];     // 32KB de SRAM para os Saves
 
 // Buffer de vídeo temporário para compor a imagem de saída para o ecrã do telemóvel (240x160 RGB)
 static uint8_t buffer_tela_tcl[240 * 160 * 3];
