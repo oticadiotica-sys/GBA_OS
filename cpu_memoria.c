@@ -6,13 +6,10 @@
 #include <stdint.h>
 
 // Matrizes globais de emulação do hardware do GBA
-unsigned char rom_do_jogo[0x2000000];  // 32MB dedicados à ROM
+unsigned char rom_do_jogo[0x100000];  // 32MB dedicados à ROM
 unsigned char vram_do_gba[0x18000];    // 96KB para Dados de Vídeo/Tiles
 unsigned char sram_do_gba[0x8000];     // 32KB para gravação de Saves
 
-// Stubs de funções externas para evitar erros de linkagem
-uint16_t ppu_ler_registador(uint32_t endereco) { (void)endereco; return 0; }
-void ppu_escrever_registador(uint32_t endereco, uint16_t valor) { (void)endereco; (void)valor; }
 
 // Leitura de 8 bits (Byte)
 uint8_t gba_memoria_ler8(uint32_t endereco) {
