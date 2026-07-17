@@ -19,6 +19,6 @@ extern GBA_CPU_t cpu;
 
 // Declaração das funções para os outros arquivos saberem que elas existem
 void cpu_arm_reset(void);
-void cpu_arm_executar_instrucao(void);
+void cpu_arm_executar_instrucao(uint32_t instrucao);
 
 #endif
