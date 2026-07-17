@@ -21,7 +21,7 @@ void cpu_arm_reset(void) {
 }
 
 // Executa o ciclo básico de instrução
-void cpu_arm_executar_instrucao(void) {
+void cpu_arm_executar_instrucao(uint32_t instrucao) {
     uint32_t pc_atual = cpu.registradores[15];
     uint32_t instrucao = gba_memoria_ler32(pc_atual);
     (void)instrucao;
