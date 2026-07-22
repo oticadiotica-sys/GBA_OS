@@ -1,6 +1,7 @@
 #include "power.h"
 #include "controles.h"
 #include <stdint.h>
+#include <stddef.h>
 
 /* =========================================================================
    Módulo de Gerenciamento de Energia - GBA_OS (TCL L5 / 5033TP)
@@ -14,12 +15,6 @@ static uint32_t contador_ms = 0;           // Contador de milissegundos
 static uint32_t tempo_inicio_pressionamento = 0;
 
 // Configuração padrão
-static PowerConfig_t config_padrao = {
-    .tempo_confirmacao_ms = 3000,          // 3 segundos para confirmar desligamento
-    .timeout_salvamento_ms = 5000,         // 5 segundos máximo para salvar estado
-    .habilitado = 1                        // Habilitado por padrão
-};
-
 static PowerConfig_t config_atual = {
     .tempo_confirmacao_ms = 3000,
     .timeout_salvamento_ms = 5000,
