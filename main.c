@@ -9,6 +9,7 @@
 #include "ppu.h"
 #include "gba_timers.h"
 #include "gba_sintetizador.h"
+#include "power.h"
 #include <stdint.h>
 
 
@@ -28,6 +29,7 @@ void main(void) {
     ppu_init();               // Zera os registradores de vídeo
     gba_timers_init();        // Configura os 4 temporizadores virtuais
     gba_sintetizador_init();  // Limpa o buffer FIFO de som
+    power_init();             // Inicializa o sistema de gerenciamento de energia
 
     // Loop principal de execução Bare-Metal
     while (1) {
@@ -71,7 +73,10 @@ void main(void) {
             }
         }
 
-        // Fim do frame: Envia a imagem final renderizada para o painel LCD físico do TCL L5
+        // Fim do frame: Processa sistema de energia (detecta pressionamento do botão POWER)
+        power_atualizar();
+
+        // Envia a imagem final renderizada para o painel LCD físico do TCL L5
         tcl_l5_enviar_buffer_tela(buffer_tela_tcl);
     }
 }
