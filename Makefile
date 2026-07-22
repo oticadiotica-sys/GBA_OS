@@ -16,9 +16,11 @@ SRCS = main.c \
        gba_timers.c \
        gba_sintetizador.c \
        controles.c \
+       power.c \
        som.c \
        sdcard.c \
-       tcl_l5_stub.c
+       tcl_l5_stub.c \
+       armazenamento.c
 
 OBJS = $(SRCS:.c=.o)
 TARGET = gba_os
