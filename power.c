@@ -1,6 +1,5 @@
 #include "power.h"
 #include "controles.h"
-#include "armazenamento.h"
 #include <stdint.h>
 
 /* =========================================================================
@@ -44,15 +43,13 @@ static void power_salvar_estado(void) {
     contador_ms = 0;
     
     // 1. Salva registradores críticos da CPU em um setor de backup na SD Card
-    // cpu_salvar_contexto() seria implementado em cpu_arm.c
-    // Para este exemplo, assumimos que existe
-    // cpu_salvar_contexto(&backup_cpu);
+    // Seria implementado em cpu_arm.c se necessário
     
     // 2. Salva blocos de RAM críticos (EWRAM, IWRAM)
-    // armazenamento_salvar_ram_backup();
+    // Seria implementado se necessário sincronizar com armazenamento
     
-    // 3. Flush de qualquer dado pendente em cache de armazenamento
-    // armazenamento_flush();
+    // 3. Flush de qualquer dado pendente em cache
+    // Pode incluir chamadas a save_sincronizar_para_disco() se necessário
 }
 
 /**
@@ -104,8 +101,7 @@ static void power_processar_botao_power(void) {
                 uint32_t tempo_decorrido = contador_ms - tempo_inicio_pressionamento;
                 if (tempo_decorrido >= config_atual.tempo_confirmacao_ms) {
                     // Tempo confirmado - inicia salvamento
-                    estado_atual = POWER_STATE_SALVANDO;
-                    contador_ms = 0;
+                    power_salvar_estado();
                 }
             }
             break;
@@ -116,7 +112,6 @@ static void power_processar_botao_power(void) {
             if (contador_ms >= config_atual.timeout_salvamento_ms) {
                 estado_atual = POWER_STATE_DESLIGANDO;
             }
-            // TODO: Integrar com armazenamento_salvo() para saber quando terminou
             break;
             
         case POWER_STATE_DESLIGANDO:
@@ -141,9 +136,6 @@ void power_init(void) {
     
     // Inicializa o módulo de controles para ler o botão POWER
     controles_init();
-    
-    // Carrega configuração (se houver salva na NVRAM/arquivo de config)
-    // power_carregar_config_de_arquivo();
 }
 
 void power_atualizar(void) {
@@ -167,8 +159,7 @@ void power_solicitar_desligamento(void) {
     // Força o desligamento imediato sem confirmação
     // Útil para shutdown via comando de software
     if (config_atual.habilitado) {
-        estado_atual = POWER_STATE_SALVANDO;
-        contador_ms = 0;
+        power_salvar_estado();
     }
 }
 
