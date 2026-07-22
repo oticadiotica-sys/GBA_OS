@@ -22,54 +22,6 @@ A bare-metal Game Boy Advance emulator operating system for TCL L5 (5033TP) smar
 This is a GBA emulator operating system for the TCL L5 5033TP. It hasn't been tested yet, but includes a complete power management system for safe device shutdown.
 
 ---
-
-## 🆕 Latest Release: v1.1.0
-
-**Date:** 2026-07-22 | **Status:** ✅ Stable
-
-### What's New in v1.1.0
-
-**GBA_OS 1.1 adds a complete power management system with support for safe shutdown of the TCL L5 (5033TP) device.**
-
-#### 🔌 Power Shutdown System (New)
-
-- ✅ **POWER Button Detection** - Long press detection (3 seconds)
-- ✅ **State Machine** - 5 operational states:
-  - `POWER_STATE_ACTIVE` - Normal operating system
-  - `POWER_STATE_PRESSING` - Button being pressed
-  - `POWER_STATE_CONFIRMATION` - Waiting for confirmation (3s)
-  - `POWER_STATE_SAVING` - Saving state before shutdown
-  - `POWER_STATE_SHUTTING_DOWN` - Shutting down hardware
-
-- ✅ **State Backup** - Backup of registers and critical data
-- ✅ **MediaTek Integration** - Integration with PMU (Power Management Unit) of MT6739
-- ✅ **Dynamic Configuration** - Customizable timeouts
-
-#### 📁 New Files
-
-| File | Description | Size |
-|------|-------------|------|
-| `power.h` | Power module header | 2.6 KB |
-| `power.c` | Power manager implementation | 5.8 KB |
-
-#### 🔧 Changes
-
-**main.c**
-- ✅ Power module initialization via `power_init()`
-- ✅ State update in main loop via `power_atualizar()`
-
-**Makefile**
-- ✅ Added `power.c` to compilation list
-- ✅ Added `armazenamento.c` to compilation list
-
-#### 🐛 Bug Fixes
-
-1. **Compilation** - Added `#include <stddef.h>` to define `NULL`
-2. **Warnings** - Removed unused `config_padrao` variable
-3. **Integration** - Removed unnecessary dependency on `armazenamento.h` in power.c
-
----
-
 ## ✨ Features
 
 ### Core Emulation
