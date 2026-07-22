@@ -2,7 +2,6 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-Active%20Development-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/platform-ARM%20Cortex--A53-orange.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
