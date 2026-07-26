@@ -23,4 +23,9 @@ void touch_ler_dados(int *out_x, int *out_y, int *detectado);
 uint16_t touch_atualizar_controles(void);
 void touch_desenhar_interface(void);
 
+// Funções auxiliares para testes
+void touch_simular_toque(int x, int y);
+void touch_liberar_toque(void);
+int touch_esta_ativo(void);
+
 #endif // TOUCH_H
