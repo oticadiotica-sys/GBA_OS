@@ -200,6 +200,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ⭐ Star us on GitHub if you like this project!
 
-[📥 Download Latest Release](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.1.0)
+[📥 Download Latest Release](https://github.com/oticadiotica-sys/GBA_OS/releases)
 
 </div>
