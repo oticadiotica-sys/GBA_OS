@@ -120,9 +120,6 @@ power_configurar(&config);
 | Version | Date | Status | Changes |
 |---------|------|--------|---------|
 | [v1.1.0](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.2.0) | 2026-07-31 | ✅ Stable | touchpad |
-|
-| Version | Date | Status | Changes |
-|---------|------|--------|---------|
 | [v1.1.0](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.1.0) | 2026-07-22 | ✅ Stable | Power Management System |
 | [v1.0.0](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.0.0) | 2026-07-17 | ✅ Stable | Initial Release |
 
