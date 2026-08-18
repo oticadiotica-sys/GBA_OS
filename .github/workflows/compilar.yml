@@ -22,7 +22,9 @@ jobs:
 
     # 3. Executa o comando do seu Makefile automaticamente
     - name: Compilar o Sistema Operacional
-      run: make
+      run: |
+      make clean
+      make
 
     # 4. Disponibiliza o arquivo final .bin para você baixar direto do navegador
     - name: Guardar binário gerado
