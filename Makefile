@@ -41,7 +41,5 @@ clean:
 
 .PHONY: clean
 
-
 clean:
-
-	rm -f *.o *.bin *.elf
+	rm -rf *.o *.bin *.elf build/ obj/ || true
