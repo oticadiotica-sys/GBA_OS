@@ -176,7 +176,8 @@ We welcome contributions! Fork the repository and submit a pull request with you
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+Copyright (c) 2026 oticadiotica-sys. All rights reserved. Any unauthorized modification or redistribution of this code is strictly prohibited.
+
 
 ---
 
