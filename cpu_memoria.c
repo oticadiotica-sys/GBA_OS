@@ -8,7 +8,7 @@
 // Matrizes globais de emulação do hardware do GBA
 unsigned char rom_do_jogo[0x100000];  // 1MB dedicados à ROM
 unsigned char vram_do_gba[0x18000];    // 96KB para Dados de Vídeo/Tiles
-unsigned char sram_do_gba[0x8000];     // 32KB para gravação de Saves
+unsigned char sram_do_gba[0x1048576];     // 1MB para gravação de Saves
 
 
 // Leitura de 8 bits (Byte)
