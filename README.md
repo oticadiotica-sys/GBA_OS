@@ -21,29 +21,6 @@ A bare-metal Game Boy Advance emulator operating system for TCL L5 (5033TP) smar
 This is a GBA emulator operating system for the TCL L5 5033TP. It hasn't been tested yet, but includes a complete power management system for safe device shutdown.
 
 ---
-## ✨ Features
-
-### Core Emulation
-- ✅ ARM CPU Emulation - Full 32-bit ARM instruction set support
-- ✅ Thumb Mode - 16-bit Thumb instruction set for optimized code
-- ✅ Memory Management - EWRAM, IWRAM, VRAM emulation
-- ✅ PPU Graphics - Direct color rendering (240x160 resolution)
-- ✅ Audio Synthesis - Timer-driven FIFO audio synthesis
-
-### System Features
-- ✅ Power Management - Safe shutdown with 3-second confirmation (v1.1+)
-- ✅ Button Input - D-Pad, A, B, L, R button support
-- ✅ Storage - eMMC integration for game ROM and save data
-- ✅ Timer System - 4 hardware timers with interrupt support
-- ✅ Dynamic Configuration - Customizable timeouts and settings
-
-### Hardware Integration
-- ✅ MediaTek MT6739 - Direct PMU (Power Management Unit) control
-- ✅ LCD Display - Native TCL L5 screen rendering
-- ✅ Audio Output - Speaker and headphone jack support
-- ✅ Physical Buttons - Mapped to GBA controls
-
----
 
 ## 🚀 Getting Started
 
