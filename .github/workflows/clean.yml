@@ -1,0 +1,12 @@
+name: limpar
+
+on:
+  push:
+    branches: [ "main" ] # Executa toda vez que você atualizar o código
+  workflow_dispatch:      # Permite que você ative a compilação manualmente pelo celular
+
+
+    - name: Limpar
+      run: |
+        make clean
+        make
