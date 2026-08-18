@@ -39,4 +39,9 @@ $(TARGET).bin: $(TARGET).elf
 clean:
 	rm -f $(OBJS) $(TARGET).elf $(TARGET).bin
 
-.PHONY: all clean
+.PHONY: clean
+
+
+clean:
+
+	rm -f *.o *.bin *.elf
