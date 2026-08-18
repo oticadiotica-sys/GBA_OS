@@ -58,14 +58,14 @@ int emmc_escrever_blocos(uint32_t setor_inicial, uint32_t quantidade, const uint
 void save_carregar_do_disco(uint8_t* sram_emulada, uint32_t setor_save) {
     // O chip de SRAM clássico do GBA tem 32KB. 
     // 32KB / 512 bytes por bloco = 64 blocos no eMMC.
-    uint32_t blocos_para_ler = TAMANHO_MAX_SAVE / TAMANHO_BLOCO_EMMC;
+    uint32_t blocos_para_ler = 256;
 
     
     emmc_ler_blocos(setor_save, blocos_para_ler, sram_emulada);
 }
 
 void save_sincronizar_para_disco(const uint8_t* sram_emulada, uint32_t setor_save) {
-    uint32_t blocos_para_escrever = TAMANHO_MAX_SAVE / TAMANHO_BLOCO_EMMC; 
+    uint32_t blocos_para_escrever = 256; 
     
     emmc_escrever_blocos(setor_save, blocos_para_escrever, sram_emulada);
 }
