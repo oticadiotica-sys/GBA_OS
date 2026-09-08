@@ -325,6 +325,5 @@ Use at your own risk.
 
 ---
 
-**Last Updated:** September 8, 2026
 
 **For questions or concerns, open an issue in the [GBA-OS Repository](https://github.com/oticadiotica-sys/GBA_OS)**
