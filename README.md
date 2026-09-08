@@ -16,7 +16,7 @@ A bare-metal Game Boy Advance emulator operating system for TCL L5 (5033TP) smar
 
 ## 📱 Overview
 
-**GBA_OS** is a custom operating system that emulates the Nintendo Game Boy Advance (GBA) on the TCL L5 (5033TP) smartphone. It runs in bare-metal mode without relying on the Android kernel, providing direct hardware access and optimal performance.
+**GBA_OS** is a custom operating system that emulates the Nintendo Game Boy Advance (GBA) on the TCL L5 (5033TP) smartphone. It runs in bare-metal mode without relying on the Android kernel, provi[...]
 
 This is a GBA emulator operating system for the TCL L5 5033TP. It hasn't been tested yet, but includes a complete power management system for safe device shutdown.
 
@@ -94,15 +94,14 @@ power_configurar(&config);
 ---
 
 ## 📊 Releases
+
 | Version | Date | Status | Changes |
 |---------|------|--------|---------|
-|
-[v1.3.0](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.3.0) | 2026-08-18 | ✅ Stable | not changes |
-|
-[v1.2.0](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.2.0) | 2026-07-31 | ✅ Stable | touchpad |
+| [v1.3.0](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.3.0) | 2026-08-18 | ✅ Stable | no changes |
+| [v1.2.0](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.2.0) | 2026-07-31 | ✅ Stable | touchpad |
 | [v1.1.0](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.1.0) | 2026-07-22 | ✅ Stable | Power Management System |
 | [v1.0.0](https://github.com/oticadiotica-sys/GBA_OS/releases/tag/1.0.0) | 2026-07-17 | ✅ Stable | Initial Release |
-|
+
 **[View all releases →](https://github.com/oticadiotica-sys/GBA_OS/releases)**
 
 ---
@@ -157,7 +156,6 @@ We welcome contributions! Fork the repository and submit a pull request with you
 ## 📄 License
 
 Copyright (c) 2026 oticadiotica-sys. All rights reserved. Any unauthorized modification or redistribution of this code is strictly prohibited.
-
 
 ---
 
